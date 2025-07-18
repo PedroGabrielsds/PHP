@@ -20,7 +20,7 @@
                 //Biblioteca INTL (Internallization PHP)
                 //echo"Seus " . numfmt_format_currency($padrao, $valor, "BRL") . " equivalem a " . numfmt_format_currency($padrao, $valor, "USD");
             ?>
-            <a href="index.html"><button>Voltar</button></a>
+            <a href="index.html"><input type="submit" value="Voltar"></a>
         </main>
         
     </body>
