@@ -7,11 +7,9 @@
         <link rel="stylesheet" href="Style.css">
     </head>
     <body>
-        <header>
+        <main>
             <h1>Resultado Ex001</h1>
 
-        </header>
-        <main>
             <?php
                 $numero = $_GET["numero"] ?? "Nenhum número digitado";
 
@@ -19,7 +17,8 @@
                 print("O seu antecessor é: " . $numero - 1 . "<br>");
                 print("O seu sucessor é: " . $numero + 1 . "<br>");
             ?>
+            <a href="index.html"><button>Voltar</button></a>
+
         </main>
-        <a href="index.html">Voltar</a>
     </body>
 </html>
