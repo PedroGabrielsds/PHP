@@ -10,10 +10,11 @@
         <main>
             <h1>Analisador de Número Real</h1>
             <?php
-                $numero = $_GET["numero"];
-                echo"Analisando o número <strong>$numero<\strong> informado pelo usuário: <br>\n";
-                echo"A parte inteira do número é <strong>" . number_format($numero, 1,) . "<\strong><br>";
-                echo"A parte fracionária do número é <strong>" . number_format($numero, 2, ",") . "<\strong>";
+                $numero = (float) $_GET["numeroreal"];
+
+                echo "Analisando o número <strong>$numero</strong> informado pelo usuário: <br>";
+                echo "<li>A parte inteira do número é <strong>" . floor((int)$numero) . "</strong></li>";
+                echo "<li>A parte fracionária do número é <strong>" . ($numero - (int)$numero) . "</strong></li>";
             ?>
         </main> 
     </body>
