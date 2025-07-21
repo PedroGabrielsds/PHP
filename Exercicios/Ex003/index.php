@@ -13,8 +13,8 @@
                 $valor  = $_GET["valor"];
                 $valor_dolar = $valor / 5.22;
 
-                echo"Seus R$ " . number_format($valor, 2, ',', '.') . " equivalem a <strong>US$ " . number_format($valor_dolar, 2, ',', '.') . "</strong><br>";
-                echo"<Strong>Cotação fixa de R$5,22</strong>, informada diretamente do código!";
+                echo"<p>Seus R$ " . number_format($valor, 2, ',', '.') . " equivalem a <strong>US$ " . number_format($valor_dolar, 2, ',', '.') . "</strong><br>";
+                echo"<Strong>Cotação fixa de R$5,22</strong>, informada diretamente do código!</p>";
                 //Formatação de moedas com intercionalização!
                 //$padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
                 //Biblioteca INTL (Internallization PHP)

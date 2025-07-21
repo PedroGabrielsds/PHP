@@ -9,11 +9,12 @@
     <body>
         <main>
             <h1>Analisador de Número Real</h1>
-            <form action="index.php">
+            <form action="index.php" method="get">
                 <label for="numero">Número Real: </label>
-                <input type="text" name="numeroreal" id="idreal">
+                <input type="number" name="numeroreal" step="0.001">
+                <input type="submit" value="Analisar">
             </form>
-            <a href="index.php"><button>Analisar</button></a>
+            
         </main>
     </body>
 </html>
