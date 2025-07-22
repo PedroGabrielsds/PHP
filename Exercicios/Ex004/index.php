@@ -11,7 +11,7 @@
             <?php
                 $valor = $_GET["valor"];
                 $data = date('m-d-Y');
-                $URL = $url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/" . "CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='07-18-2025'&\$format=json";
+                $URL = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/" . "CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='07-18-2025'&\$format=json";
                 $conteudo_API = file_get_contents($URL); //Busca o conteúdo da URL
                 $dados = json_decode($conteudo_API, true); //Converte o conteúdo da URL em um array PHP
                 $cotacao = $dados["value"][0]["cotacaoCompra"]; //Pega o valor na posição 0 do array do elemente "cotacaoCompra"
