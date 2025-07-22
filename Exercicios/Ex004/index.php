@@ -9,9 +9,10 @@
     <body>
         <main>
             <?php
-                $valor = $_GET["valor"];
-                $data = date('m-d-Y');
-                $URL = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/" . "CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='07-18-2025'&\$format=json";
+                $valor = $_GET["valor"] ?? "Sem valor";
+                $data_inicio = date("m-d-Y", strtotime("-7 days"));
+                $data_fim = date('m-d-Y');
+                $URL = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'' . $data_inicio . '\'&@dataFinalCotacao=\'' . $data_fim . '\'&\$top=1&\$orderby=dataHoraCotacao%20desc&\$format=json&\$select=cotacaoCompra,dataHoraCotacao';
                 $conteudo_API = file_get_contents($URL); //Busca o conteúdo da URL
                 $dados = json_decode($conteudo_API, true); //Converte o conteúdo da URL em um array PHP
                 $cotacao = $dados["value"][0]["cotacaoCompra"]; //Pega o valor na posição 0 do array do elemente "cotacaoCompra"
