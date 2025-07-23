@@ -10,27 +10,36 @@
         <main>
             <pre>
                 <?php
-                    setcookie("dia-da-semana", "Terça", time() + 3600);
+                    setcookie("dia-da-semana", "Quarta", time() + 3600);
 
                     $_SESSION["teste"] = "Funcionou!";
 
-                    echo"<h1>SuperGlobais GET </h1>";
-                    var_dump($_GET);
+                    echo"<h1>SuperGlobal GET </h1>";
+                    var_dump($_GET); //query string
 
-                    echo"<h1>SuperGlobais POST </h1>";
-                    var_dump($_POST);
+                    echo"<h1>SuperGlobal POST </h1>";
+                    var_dump($_POST); 
 
-                    echo"<h1>SuperGlobais REQUEST </h1>";
+                    echo"<h1>SuperGlobal REQUEST </h1>";
                     var_dump($_REQUEST);
 
-                    echo"<h1>SuperGlobais COOKIE </h1>";
+                    echo"<h1>SuperGlobal COOKIE </h1>";
                     var_dump($_COOKIE);
 
-                    echo"<h1>SuperGlobais SESSION </h1>";
+                    echo"<h1>SuperGlobal FILES</h1>";
+                    var_dump($_FILES);
+
+                    echo"<h1>SuperGlobal SESSION </h1>";
                     var_dump($_SESSION);
 
-                    echo"<h1>SuperGlobais ENV </h1>";
+                    echo"<h1>SuperGlobal ENV </h1>";
                     var_dump($_ENV);
+
+                    echo"<h1>SuperGlobal SERVER </h1>";
+                    var_dump($_SERVER);
+
+                    echo"<h1>SuperGlobal GLOBALS </h1>";
+                    var_dump($GLOBALS);
 
                 ?>
             </pre>
