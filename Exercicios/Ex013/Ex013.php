@@ -28,7 +28,7 @@
             ?>
             <p>O caixa eletrônico vai sacar as seguintes notas: </p>
             <ul>
-                <li></li>
+                <li><img src="/Exercicios/Ex013/image/100_back.jpg" alt="100reais">x<?=$variavel?></li>
                 <li></li>
                 <li></li>
                 <li></li>
